@@ -1,15 +1,18 @@
-
+import java.util.*;
 public class Questions
 	{
-
-		public static void main(String[] args)
-			{
-			A aB = new B(3);
-			A aA = new A();
-			A aAA= new A(5);
-			B bB = new B(1);
-			A aC = new C(2);
-			C cC = new C(5);
-			}
+	static int number;
+	static String answer;
+	static String question;
+	static boolean trueFalse;
+	ArrayList <Questions> qA = new ArrayList<Questions>();
+	public Questions(int n, String a, String q, boolean t)
+		{
+		number=n;
+		answer=a;
+		question=q;
+		trueFalse=false;
+		}
+	qA.add(new Questions(1," "," "));
 
 	}

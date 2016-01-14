@@ -3,7 +3,6 @@ public class C extends A
 	{
 	public C(int n)
 		{
-		super();
 		num=super.newNum();
 		}
 	public int newNum()

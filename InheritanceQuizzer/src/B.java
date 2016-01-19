@@ -5,6 +5,10 @@ public class B extends A
 		{
 		num=n*2;
 		}
+	public B()
+		{
+		num+=num;
+		}
 	public int newNum()
 		{
 		super.newNum();

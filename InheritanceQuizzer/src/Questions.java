@@ -23,6 +23,7 @@ public class Questions
 		qA.add(new Questions(2,"T","If A cC = new C(5), will cC.newNum() equal 1?"));
 		qA.add(new Questions(2,"T","If C had another subclass named D, could you declare an object as A aD = new D?"));
 		qA.add(new Questions(2,"F","Could you declare an object as B aD = new A?"));
+		
 		}
 	public static void doQuiz()
 	{

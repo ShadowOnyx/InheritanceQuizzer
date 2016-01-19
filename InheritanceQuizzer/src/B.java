@@ -15,3 +15,4 @@ public class B extends A
 		return num;
 		}
 	}
+

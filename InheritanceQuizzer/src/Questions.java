@@ -13,25 +13,30 @@ public class Questions
 		}
 	public static void makeQs()
 		{
-		qA.add(new Questions(1,"What will num equal when A aB = new B(3)"," "));
-		qA.add(new Questions(1,"What will num equal when A aA = new A();"," "));
-		qA.add(new Questions(1,"What will num equal when A aAA= new A(5);"," "));
-		qA.add(new Questions(1,"What will num equal when A aC = new C(2);"," "));
-		qA.add(new Questions(1,"What will num equal when B bB = new B(1);"," "));
-		qA.add(new Questions(1,"What will num equal when C cC = new C(5);"," "));
+		qA.add(new Questions(1,"6","What will num equal when A aB = new B(3)?"));
+		qA.add(new Questions(1,"5","What will num equal when A aA = new A()?"));
+		qA.add(new Questions(1,"5","What will num equal when A aAA= new A(5)?"));
+		qA.add(new Questions(1,"25","What will num equal when A aC = new C(2)?"));
+		qA.add(new Questions(1,"2","What will num equal when B bB = new B(1)?"));
+		qA.add(new Questions(1,"25","What will num equal when C cC = new C(5)?"));
+		qA.add(new Questions(1,"1","What will newNum() return when A aC = new C(5)?"));
+		qA.add(new Questions(2,"T","If A cC = new C(5), will cC.newNum() equal 1?"));
+		qA.add(new Questions(2,"T","If C had another subclass named D, could you declare an object as A aD = new D?"));
+		qA.add(new Questions(2,"F","Could you declare an object as B aD = new A?"));
 		}
 	public static void doQuiz()
 	{
 	int counter=0;
 	Scanner userInput = new Scanner(System.in);	
-	int random=(int)Math.random()*qA.size();
+	Collections.shuffle(qA);
 	String userAnswer;
-	for(Object i:qA)
+	for(int i=0;i<qA.size();i++)
 		{
-		String trueAnswer=qA.get(random).getAnswer();	
-		qA.get(random);
-		if(qA.get(random).getNumber()==1)	
+		String trueAnswer=qA.get(i).getAnswer();	
+		qA.get(i);
+		if(qA.get(i).getNumber()==1)	
 			{
+			System.out.println(qA.get(i).getQuestion());	
 			System.out.println("Enter the answer as a number");
 			userAnswer=userInput.nextLine();
 			System.out.println();
@@ -43,8 +48,9 @@ public class Questions
 			else
 				System.out.println("Incorrect, your answer was "+userAnswer+", correct answer was "+trueAnswer);
 			}
-		if(qA.get(random).getNumber()==2)
+		if(qA.get(i).getNumber()==2)
 			{
+			System.out.println(qA.get(i).getQuestion());	
 			System.out.println("Enter the answer as 'T/F'");
 			userAnswer=userInput.nextLine();
 			System.out.println();

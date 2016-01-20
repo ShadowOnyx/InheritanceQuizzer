@@ -4,9 +4,8 @@ public class Runner
 
 		public static void main(String[] args)
 			{
-			A cC = new C(5);
-			System.out.println(cC.getNum());
-			System.out.println(cC.newNum());
+			A aB = new B(10);
+			System.out.println(aB.newNum());
 			Questions.makeQs();
 			Questions.doQuiz();
 			
